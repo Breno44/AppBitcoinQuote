@@ -4,17 +4,17 @@ import { View, Text, Image } from "react-native";
 
 import { styles } from "./styles";
 
-export function QuotationsItem() {
+export function QuotationsItem(props) {
   return (
     <View style={styles.mainContent}>
       <View style={styles.contextLeft}>
         <View style={styles.boxLogo}>
           <Image style={styles.logoBit} source={require("../../../img/lg.png")} />
-          <Text style={styles.dayQuote}>07/05/2021</Text>
+          <Text style={styles.dayQuote}>{props.data}</Text>
         </View>
       </View>
       <View style={styles.contextRight}>
-        <Text style={styles.price}>$ 53331.052</Text>
+        <Text style={styles.price}>$ {props.valor}</Text>
       </View>
     </View>
   );
